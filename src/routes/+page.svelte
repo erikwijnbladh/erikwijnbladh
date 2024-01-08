@@ -196,7 +196,11 @@
                 alt="project screenshot"
               />
             </Carousel>
-            <a class="project-info" href="https://speqta.com/" target="_blank">
+            <a
+              class="project-info"
+              href="https://speqta.com/en"
+              target="_blank"
+            >
               <h3>Speqta - current</h3>
               <p>
                 Building internal tools & customer facing interfaces.
@@ -267,7 +271,7 @@
         <div class="projects">
           <a
             class="project"
-            href="https://speqta.com/"
+            href="https://speqta.com/en"
             target="_blank"
             on:mouseover={() => {
               hoveredProject = 1;
