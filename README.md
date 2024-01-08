@@ -1,6 +1,7 @@
-#
+# Welcome to me!
 
-Hello and welcome to my portfolio site
+Check out my portfolio project⬇️
+https://github.com/erikwijnbladh/erikwijnbladh
 
 ## Running the project
 
