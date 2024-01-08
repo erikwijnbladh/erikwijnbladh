@@ -196,11 +196,7 @@
                 alt="project screenshot"
               />
             </Carousel>
-            <a
-              class="project-info"
-              href="//https://speqta.com/"
-              target="_blank"
-            >
+            <a class="project-info" href="https://speqta.com/" target="_blank">
               <h3>Speqta - current</h3>
               <p>
                 Building internal tools & customer facing interfaces.
@@ -225,7 +221,7 @@
             </Carousel>
             <a
               class="project-info"
-              href="//https://selfcheck.se/en/english/"
+              href="https://selfcheck.se/en/english/"
               target="_blank"
             >
               <h3>Selfcheck</h3>
@@ -252,7 +248,7 @@
             </Carousel>
             <a
               class="project-info"
-              href="//https://www.oru.se/english/"
+              href="https://www.oru.se/english/"
               target="_blank"
             >
               <h3>Education & Hobby project</h3>
@@ -271,7 +267,7 @@
         <div class="projects">
           <a
             class="project"
-            href="//https://speqta.com/"
+            href="https://speqta.com/"
             target="_blank"
             on:mouseover={() => {
               hoveredProject = 1;
@@ -288,7 +284,7 @@
           </a>
           <a
             class="project"
-            href="//https://selfcheck.se/en/english/"
+            href="https://selfcheck.se/en/english/"
             target="_blank"
             on:mouseover={() => {
               hoveredProject = 2;
@@ -305,7 +301,7 @@
           </a>
           <a
             class="project"
-            href="//https://www.oru.se/english/"
+            href="https://www.oru.se/english/"
             target="_blank"
             on:mouseover={() => {
               hoveredProject = 3;
