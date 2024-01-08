@@ -476,7 +476,7 @@
     >
   </div>
   <div class="footer-right">
-    <a href="https://github.com/erikwijnbladh/site" target="_blank"
+    <a href="https://github.com/erikwijnbladh/erikwijnbladh" target="_blank"
       >Source code for this site</a
     >
     <div class="footer-socials">
