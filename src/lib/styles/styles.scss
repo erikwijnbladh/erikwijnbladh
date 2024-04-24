@@ -405,6 +405,9 @@ nav {
 }
 
 .work {
+  @media (max-width: 800px) {
+    margin-top: 4rem;
+  }
   min-height: 100vh;
   display: flex;
   background: $bg;
@@ -689,7 +692,7 @@ nav {
   }
 
   .mobile-projects {
-    padding: 2rem $app-x-padding;
+    padding: $app-x-padding;
 
     h2 {
       font-size: 20vw;
