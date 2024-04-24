@@ -79,6 +79,7 @@
       await import("@formatjs/intl-segmenter/polyfill-force");
     }
   })();
+  import { fade } from "svelte/transition";
 </script>
 
 <Metatags />
@@ -106,6 +107,11 @@
 
 <header class="hero">
   <h1>
+    <img
+      src="https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-6/433454274_7397189410364526_7527075592214365542_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=z5ER5dZn7R8Q7kNvgGfXJXr&_nc_ht=scontent-arn2-1.xx&oh=00_AfD_hPMPArYX-fN0twsnDjr2n8on4kt1xpgkXoFE13aNkQ&oe=662EE093"
+      class="avatar"
+      alt="Erik Wijnbladh's avatar"
+    />
     Erik is a
     <span class="selected" style="--cursor-color: #000; --cursor-width: 0.1em;">
       <div class="selected-bottom-dots"></div>
@@ -117,32 +123,28 @@
         delay="1000"
       >
         <span>Developer</span>
+        <span>Gamer</span>
         <span>Skier</span>
-        <span>Nerd</span>
         <span>Cat dad</span>
       </Typewriter>
     </span>
   </h1>
-
   <div class="hero-bottom">
     <div class="hero-about">
       <p>
-        Hey there👋<strong>I'm Erik</strong>! I do
-        <strong>Front-End Development</strong>
-        and craft web <strong>applications</strong> using
-        <strong>modern frameworks</strong>
-        and <strong>cool libraries</strong>.
+        Hey there👋I'm Erik! I do Front-End Development and craft web
+        applications using modern frameworks and cool libraries.
       </p>
       <br />
       <p>
-        Right now, I'm working for an Adtech SaaS and optimzing e-commerces
-        through AI Ad Optimization. Giving insights and tools via user friendly
-        interfaces.
+        Right now, I'm working for an Adtech SaaS aiming to empower e-commerces
+        through AI Ad Optimization. Providing tools and giving insights via user
+        friendly interfaces.
       </p>
     </div>
     <div class="hero-skills">
       <div class="skill-category">
-        <p><strong>Professionally</strong></p>
+        <p>Professionally</p>
         <p>
           Vue & Nuxt<br />
           Tailwind<br />
@@ -151,7 +153,7 @@
       </div>
       <br />
       <div class="skill-category">
-        <p><strong>Hobby</strong></p>
+        <p>Hobby</p>
         <p>
           Svelte<br />
           GSAP<br />
@@ -160,7 +162,7 @@
     </div>
     <div class="hero-time-and-scroll">
       <p class="hero-time">
-        <strong>{time} Stockholm</strong><br />
+        {time} Stockholm<br />
         Scroll for more
       </p>
       <div class="hero-scroll">
@@ -184,15 +186,15 @@
           <div class="project">
             <Carousel>
               <img
-                src="/project-screenshots/bidbrain-1.webp"
-                alt="project screenshot"
-              />
-              <img
                 src="/project-screenshots/brightbid-1.webp"
                 alt="project screenshot"
               />
               <img
                 src="/project-screenshots/speqta-1.webp"
+                alt="project screenshot"
+              />
+              <img
+                src="/project-screenshots/bidbrain-1.webp"
                 alt="project screenshot"
               />
             </Carousel>
@@ -201,10 +203,10 @@
               href="https://speqta.com/en"
               target="_blank"
             >
-              <h3>Speqta - current</h3>
+              <h3>BrightBid - Current</h3>
               <p>
-                Building internal tools & customer facing interfaces.
-                (Bidbrain/BrightBid)
+                AI powered SaaS platform. Building internal tools & customer
+                facing interfaces.
               </p>
             </a>
           </div>
@@ -255,18 +257,29 @@
               href="https://www.oru.se/english/"
               target="_blank"
             >
-              <h3>Education & Hobby project</h3>
+              <h3>Education & projects</h3>
               <p>
-                BSc in Informatics from Örebro University. And some small hobby
+                BSc in Informatics from Örebro University. And some small side
                 projects.
               </p>
+              {#if hoveredProject === 3}
+                <span
+                  class="github-link"
+                  style="position: absolute; right-0"
+                  transition:fade={{ duration: 200 }}
+                >
+                  <a href="https://github.com/erikwijnbladh" target="_blank">
+                    <img src="/assets/github-white.svg" alt="github" />
+                  </a>
+                </span>
+              {/if}
             </a>
           </div>
         </div>
       </div>
     {:else}
       <div class="selector">
-        <h2>My Work</h2>
+        <h2 style="text-left">My Work</h2>
         <h2>& Experience</h2>
         <div class="projects">
           <a
@@ -280,10 +293,10 @@
               hoveredProject = 1;
             }}
           >
-            <h3>Speqta - current</h3>
+            <h3>BrightBid - Current</h3>
             <p>
-              Building internal tools & customer facing interfaces.
-              (Bidbrain/BrightBid)
+              AI powered SaaS platform. Building internal tools & customer
+              facing interfaces.
             </p>
           </a>
           <a
@@ -314,10 +327,21 @@
               hoveredProject = 3;
             }}
           >
-            <h3>Education & Hobby project</h3>
+            <h3>Education & projects</h3>
             <p>
-              BSc in Informatics from Örebro University. And some small hobby
+              BSc in Informatics from Örebro University. And some small side
               projects.
+              {#if hoveredProject === 3}
+                <span
+                  class="github-link"
+                  style="position: absolute; right-0"
+                  transition:fade={{ duration: 200 }}
+                >
+                  <a href="https://github.com/erikwijnbladh" target="_blank">
+                    <img src="/assets/github-white.svg" alt="github" />
+                  </a>
+                </span>
+              {/if}
             </p>
           </a>
           <div class="selection-box">
@@ -336,11 +360,11 @@
           <div class="images">
             <Carousel>
               <img
-                src="/project-screenshots/bidbrain-1.webp"
+                src="/project-screenshots/brightbid-1.webp"
                 alt="project screenshot"
               />
               <img
-                src="/project-screenshots/brightbid-1.webp"
+                src="/project-screenshots/bidbrain-1.webp"
                 alt="project screenshot"
               />
               <img
@@ -388,7 +412,7 @@
       <div class="contact-content">
         <div class="content-left">
           <div class="content-category">
-            <p><strong>Contact</strong></p>
+            <p>Contact</p>
             <p>
               <a href="mailto:wijnbladherik@gmail.com" target="_blank"
                 >wijnbladherik@gmail.com</a
@@ -400,11 +424,11 @@
             </p>
           </div>
           <div class="content-category">
-            <p><strong>Location</strong></p>
+            <p>Location</p>
             <p>Currently based in Stockholm, Sweden</p>
           </div>
           <div class="content-category">
-            <p><strong>Links</strong></p>
+            <p>Links</p>
             <p>
               <a href="https://github.com/erikwijnbladh" target="_blank"
                 >Github</a
@@ -413,7 +437,10 @@
                 href="https://www.linkedin.com/in/erik-wijnbladh-a59703187/"
                 target="_blank">LinkedIn</a
               ><br />
-              <a href="https://twitch.tv/yorks_" target="_blank">Twitch</a>
+              <a
+                href="https://discord.com/users/138712805850218496"
+                target="_blank">Discord</a
+              >
             </p>
           </div>
         </div>

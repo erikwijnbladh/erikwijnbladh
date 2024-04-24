@@ -7,10 +7,44 @@
 $bg: #c8c8c8;
 $bg-secondary: #e6e6fa;
 $primary: #1a1a1a;
+$socials: #1a1a1a;
 $secondary: #333333;
 
 $app-x-padding: 10vw;
+.github-link {
+  gap: 0.5rem;
+  margin-left: 0.5rem;
 
+  a {
+    background: $primary;
+    border-radius: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 800px) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    img {
+      max-width: 1rem;
+      margin-left: 6px;
+      margin-top: 6px;
+      @media (max-width: 800px) {
+        max-width: 0.75rem;
+      }
+    }
+
+    transition: 0.2s ease;
+    &:hover {
+      background: $primary;
+      transform: scale(1.1) rotate(10deg);
+    }
+  }
+}
 // Global Styles
 body {
   background: $bg;
@@ -21,11 +55,6 @@ body {
   p {
     color: $secondary;
     line-height: 1.5;
-
-    strong {
-      color: $primary;
-      font-weight: inherit;
-    }
   }
 }
 
@@ -78,7 +107,7 @@ nav {
     gap: 0.5rem;
 
     a {
-      background: $primary;
+      background: $socials;
       border-radius: 50%;
       width: 1.75rem;
       height: 1.75rem;
@@ -99,7 +128,7 @@ nav {
 
       transition: 0.2s ease;
       &:hover {
-        background: $primary;
+        background: $socials;
         transform: scale(1.1) rotate(10deg);
       }
     }
@@ -141,6 +170,14 @@ nav {
   padding: 8.5rem $app-x-padding 4rem $app-x-padding;
   height: 100vh;
   height: 100svh;
+  .avatar {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    @media (max-width: 800px) {
+      width: 100px;
+    }
+  }
 
   @media (max-width: 800px) {
     padding: 5.5rem $app-x-padding 2rem $app-x-padding;
@@ -151,7 +188,10 @@ nav {
   justify-content: space-between;
 
   h1 {
-    font-size: 9.5vw;
+    font-size: 7.5vw;
+    @media (max-width: 800px) {
+      font-size: 5.5vw;
+    }
     display: flex;
     align-items: center;
     gap: 0.2em;
@@ -375,7 +415,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
 
     h2 {
       font-size: 5.5rem;
@@ -946,7 +986,7 @@ nav {
       padding-top: 0.5rem;
 
       a {
-        background: $primary;
+        background: $socials;
         border-radius: 50%;
         width: 1.5rem;
         height: 1.5rem;
@@ -960,7 +1000,7 @@ nav {
 
         transition: 0.2s ease;
         &:hover {
-          background: $primary;
+          background: $socials;
           transform: scale(1.1) rotate(10deg);
         }
       }
