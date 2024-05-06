@@ -107,11 +107,7 @@
 
 <header class="hero">
   <h1>
-    <img
-      src="https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-6/433454274_7397189410364526_7527075592214365542_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=z5ER5dZn7R8Q7kNvgGfXJXr&_nc_ht=scontent-arn2-1.xx&oh=00_AfD_hPMPArYX-fN0twsnDjr2n8on4kt1xpgkXoFE13aNkQ&oe=662EE093"
-      class="avatar"
-      alt="Erik Wijnbladh's avatar"
-    />
+    <img src="/assets/erik.jpg" class="avatar" alt="Erik Wijnbladh's avatar" />
     Erik is a
     <span class="selected" style="--cursor-color: #000; --cursor-width: 0.1em;">
       <div class="selected-bottom-dots"></div>
