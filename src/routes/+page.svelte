@@ -443,8 +443,8 @@
         <form
           class="contact-form"
           acceptCharset="utf-8"
-          action="https://formsubmit.co/ac26fdad1a10ea5e206b374a0cc78d6b"
-          method="post"
+          action="https://formspree.io/f/mbldkywe"
+          method="POST"
         >
           <div class="group">
             <div class="field">
@@ -472,19 +472,20 @@
           </div>
           <div class="field">
             <label for="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Message"
-              required
-            />
+            <textarea name="message" id="message" placeholder="Message" required
+            ></textarea>
           </div>
-          <input type="submit" value="Submit" />
+          <!-- Optionally disable reCAPTCHA -->
+          <input type="hidden" name="_captcha" value="false" />
+
+          <!-- Redirect after submission -->
           <input
             type="hidden"
             name="_next"
             value="https://www.erikwijnbladh.se"
           />
+
+          <input type="submit" value="Submit" />
         </form>
       </div>
     </div>
