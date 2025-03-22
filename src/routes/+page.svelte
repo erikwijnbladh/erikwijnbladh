@@ -4,6 +4,7 @@
   import Typewriter from "svelte-typewriter";
   import Carousel from "$lib/components/Carousel.svelte";
   import Metatags from "$lib/components/Metatags.svelte";
+  import NowPlaying from "$lib/components/NowPlaying.svelte";
 
   let windowWidth;
   onMount(() => {
@@ -65,6 +66,25 @@
           end: "bottom top",
           scrub: true,
         },
+      });
+
+      // Add a subtle animation for the Spotify component
+      gsap.from(".now-playing", {
+        opacity: 0,
+        y: 10,
+        duration: 0.7,
+        delay: 0.7,
+        ease: "power2.out",
+      });
+
+      // Add pulse animation for track playing
+      gsap.to(".live-indicator", {
+        scale: 1.2,
+        opacity: 0.7,
+        duration: 1.2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
       });
     }
   });
@@ -133,7 +153,7 @@
       </p>
       <br />
       <p>
-        Right now, I'm working for an Adtech SaaS aiming to empower e-commerces
+        Most recently, I worked for an Adtech SaaS aiming to empower e-commerces
         through AI Ad Optimization. Providing tools and giving insights via user
         friendly interfaces.
       </p>
@@ -158,9 +178,10 @@
     </div>
     <div class="hero-time-and-scroll">
       <p class="hero-time">
-        {time} Stockholm<br />
-        Scroll for more
+        {time} Stockholm
       </p>
+      <NowPlaying />
+      <p class="scroll-hint">Scroll for more</p>
       <div class="hero-scroll">
         <div></div>
         <div></div>
@@ -196,7 +217,7 @@
             </Carousel>
             <a
               class="project-info"
-              href="https://speqta.com/en"
+              href="https://brightbid.com/"
               target="_blank"
             >
               <h3>BrightBid - Current</h3>
@@ -280,7 +301,7 @@
         <div class="projects">
           <a
             class="project"
-            href="https://speqta.com/en"
+            href="https://brightbid.com/"
             target="_blank"
             on:mouseover={() => {
               hoveredProject = 1;
@@ -437,6 +458,8 @@
                 href="https://discord.com/users/138712805850218496"
                 target="_blank">Discord</a
               >
+              <br />
+              <a href="https://twitch.tv/yorks_" target="_blank">Twitch</a>
             </p>
           </div>
         </div>
@@ -500,9 +523,7 @@
     >
   </div>
   <div class="footer-right">
-    <a href="https://github.com/erikwijnbladh/erikwijnbladh" target="_blank"
-      >Source code for this site</a
-    >
+    <p>Socials</p>
     <div class="footer-socials">
       <a href="https://github.com/erikwijnbladh" target="_blank">
         <img src="/assets/github-white.svg" alt="github" />
@@ -522,3 +543,11 @@
     </div>
   </div>
 </footer>
+
+<style>
+  .scroll-hint {
+    font-size: 13px;
+    opacity: 0.7;
+    margin: 4px 0 8px;
+  }
+</style>

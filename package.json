@@ -18,6 +18,7 @@
   "dependencies": {
     "@formatjs/intl-segmenter": "^11.5.3",
     "@vercel/analytics": "^1.1.1",
+    "axios": "^1.8.4",
     "dayjs": "^1.11.10",
     "gsap": "^3.12.4",
     "sass": "^1.69.5",
