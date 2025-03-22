@@ -175,6 +175,12 @@
           GSAP<br />
         </p>
       </div>
+
+      {#if windowWidth <= 1100}
+        <div class="mobile-now-playing">
+          <NowPlaying />
+        </div>
+      {/if}
     </div>
     <div class="hero-time-and-scroll">
       <p class="hero-time">

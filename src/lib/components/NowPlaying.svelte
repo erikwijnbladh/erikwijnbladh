@@ -155,12 +155,15 @@
   }
 
   @media (max-width: 767px) {
-    .track-title,
-    .spotify-status {
-      max-width: 180px;
+    /* centere all content */
+    .now-playing {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
-    .track-artist {
-      max-width: 180px;
+
+    .track-info {
+      text-align: center;
     }
   }
 </style>
