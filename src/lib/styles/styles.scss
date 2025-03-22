@@ -312,6 +312,32 @@ nav {
         }
       }
 
+      .mobile-now-playing {
+        margin-top: 2rem;
+
+        .now-playing {
+          justify-content: flex-start;
+          text-align: left;
+        }
+
+        :global(.track-info) {
+          text-align: left;
+          order: 2;
+        }
+
+        :global(.playing-on-spotify) {
+          justify-content: flex-start;
+        }
+
+        :global(.track) {
+          flex-direction: row;
+        }
+
+        :global(.album-art) {
+          order: 1;
+        }
+      }
+
       opacity: 0;
       animation-name: fade-up;
       animation-duration: 1.5s;
